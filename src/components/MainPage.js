@@ -1,7 +1,7 @@
-import ProductCard from "./ProductCard";
+import ProductCard from './ProductCard';
+import '../css/MainPage.css';
 
 function MainPage({ products, onAddToCart }) {
-  console.log('Products:', products);
   if (!products || !Array.isArray(products)) {
     return <div>Нет товаров для отображения</div>;
   }

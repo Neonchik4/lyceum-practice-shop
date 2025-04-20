@@ -1,0 +1,30 @@
+aside {
+    width: 200px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  aside h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #2c3e50;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .category-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #34495e;
+  }
+  
+  .category-item:hover {
+    background-color: #dfe6e9;
+    border-radius: 4px;
+  }

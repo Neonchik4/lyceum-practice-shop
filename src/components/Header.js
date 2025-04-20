@@ -1,15 +1,13 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import '../css/Header.css';
 
-function Header() {
-  const [cartCount, setCartCount] = useState(0);
-
+function Header({ cartCount }) {
   return (
-    <header style={{ padding: '10px', background: '#f0f0f0', display: 'flex', justifyContent: 'space-between' }}>
-      <h1>Мой магазин</h1>
+    <header>
+      <h1>Tech Store</h1>
       <nav>
-        <Link to="/" style={{ marginRight: '20px' }}>Главная</Link>
-        <Link to="/cart">Корзина ({cartCount})</Link>
+        <Link to="/">Главная</Link>
+        <Link to="/cart">Корзина ({cartCount || 0})</Link>
       </nav>
     </header>
   );

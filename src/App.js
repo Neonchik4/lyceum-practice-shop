@@ -19,10 +19,15 @@ function App() {
   ];
 
   const calculateTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cartItems.reduce((total, item) => total + (item.price || 0) * (item.quantity || 1), 0);
   };
 
   const handleAddToCart = (product) => {
+    if (!product || !product.id) {
+      console.error('Invalid product:', product);
+      return;
+    }
+
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
       if (existingItem) {
@@ -37,7 +42,7 @@ function App() {
   const handleRemoveFromCart = (productId) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === productId);
-      if (existingItem.quantity > 1) {
+      if (existingItem && existingItem.quantity > 1) {
         return prevItems.map((item) =>
           item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
         );
@@ -60,7 +65,7 @@ function App() {
       <div style={{ display: 'flex' }}>
         <Aside onCategorySelect={handleCategorySelect} />
         <div style={{ flex: 1 }}>
-          <Header cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)} />
+          <Header cartCount={cartItems.reduce((total, item) => total + (item.quantity || 0), 0)} />
           <Routes>
             <Route
               path="/"
