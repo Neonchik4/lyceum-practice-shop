@@ -1,0 +1,33 @@
+.navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: blanchedalmond;
+  padding: 8px;
+}
+
+.page-content {
+  display: flex;
+  height: calc(100vh - 95px);
+}
+
+aside {
+  width: 20%;
+  background: green;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  width: 100%;
+}
+
+.card {
+    width: 120px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 4px;
+}
