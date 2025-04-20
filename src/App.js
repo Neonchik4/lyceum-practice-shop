@@ -6,8 +6,9 @@ import MainPage from './components/MainPage';
 import CartPage from './components/CartPage';
 
 function App() {
+    const categories = ['Все', 'Ноутбуки', 'Смартфоны', 'Аксессуары', 'Планшеты'];
   const [cartItems, setCartItems] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
   const products = [
     { id: 1, name: 'Ноутбук', price: 500, category: 'Ноутбуки', description: 'Мощный ноутбук для работы', image: 'https://via.placeholder.com/150' },
@@ -56,7 +57,7 @@ function App() {
   };
 
   const filteredProducts =
-    selectedCategory && selectedCategory !== 'All'
+    selectedCategory && selectedCategory !== categories[0]
       ? products.filter((product) => product && product.category === selectedCategory)
       : products;
 
