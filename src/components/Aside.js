@@ -1,11 +1,11 @@
 import '../css/Aside.css';
 
 function Aside({ onCategorySelect }) {
-  const categories = ['All', 'Laptops', 'Smartphones', 'Accessories', 'Tablets'];
+  const categories = ['Все', 'Ноутбуки', 'Смартфоны', 'Аксессуары', 'Планшеты'];
 
   return (
     <aside>
-      <h2>Категории</h2>
+      <h1>Категории</h1>
       <ul>
         {categories.map((category) => (
           <li

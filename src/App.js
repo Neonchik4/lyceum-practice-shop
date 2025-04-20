@@ -10,12 +10,12 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const products = [
-    { id: 1, name: 'Laptop', price: 500, category: 'Laptops', description: 'Powerful laptop for work', image: 'https://via.placeholder.com/150' },
-    { id: 2, name: 'Smartphone', price: 300, category: 'Smartphones', description: 'Modern smartphone', image: 'https://via.placeholder.com/150' },
-    { id: 3, name: 'Headphones', price: 50, category: 'Accessories', description: 'Wireless headphones', image: 'https://via.placeholder.com/150' },
-    { id: 4, name: 'Tablet', price: 400, category: 'Tablets', description: 'Compact tablet', image: 'https://via.placeholder.com/150' },
-    { id: 5, name: 'Smartwatch', price: 200, category: 'Accessories', description: 'Smartwatch with fitness tracking', image: 'https://via.placeholder.com/150' },
-    { id: 6, name: 'Monitor', price: 250, category: 'Accessories', description: '4K monitor', image: 'https://via.placeholder.com/150' },
+    { id: 1, name: 'Ноутбук', price: 500, category: 'Ноутбуки', description: 'Мощный ноутбук для работы', image: 'https://via.placeholder.com/150' },
+    { id: 2, name: 'Смартфон', price: 300, category: 'Смартфоны', description: 'Современный смартфон', image: 'https://via.placeholder.com/150' },
+    { id: 3, name: 'Наушники', price: 50, category: 'Аксессуары', description: 'Беспроводные наушники', image: 'https://via.placeholder.com/150' },
+    { id: 4, name: 'Планшет', price: 400, category: 'Планшеты', description: 'Компактный планшет', image: 'https://via.placeholder.com/150' },
+    { id: 5, name: 'Смарт-часы', price: 200, category: 'Аксессуары', description: 'Смарт-часы с функцией фитнес-трекинга', image: 'https://via.placeholder.com/150' },
+    { id: 6, name: 'Монитор', price: 250, category: 'Аксессуары', description: '4K монитор', image: 'https://via.placeholder.com/150' },
   ];
 
   const calculateTotalPrice = () => {
