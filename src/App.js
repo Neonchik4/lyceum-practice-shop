@@ -10,7 +10,6 @@ function App() {
     <Router>
        <Header></Header>
        <div className='page-content'>
-      
         <Aside></Aside>
 
         <Routes>
