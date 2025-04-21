@@ -5,13 +5,16 @@ import Aside from './components/Aside';
 import MainPage from './components/MainPage';
 import CartPage from './components/CartPage';
 
+import laptopImage from './assets/images.jpg';
+
 function App() {
     const categories = ['Все', 'Ноутбуки', 'Смартфоны', 'Аксессуары', 'Планшеты'];
     const [cartItems, setCartItems] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
     const products = [
-        { id: 1, name: 'Ноутбук', price: 500, category: 'Ноутбуки', description: 'Мощный ноутбук для работы', image: 'https://via.placeholder.com/150' },
+        { id: 1, name: 'Ноутбук', price: 500, category: 'Ноутбуки', description: 'Мощный ноутбук для работы', 
+            image: laptopImage },
         { id: 2, name: 'Смартфон', price: 300, category: 'Смартфоны', description: 'Современный смартфон', image: 'https://via.placeholder.com/150' },
         { id: 3, name: 'Наушники', price: 50, category: 'Аксессуары', description: 'Беспроводные наушники', image: 'https://via.placeholder.com/150' },
         { id: 4, name: 'Планшет', price: 400, category: 'Планшеты', description: 'Компактный планшет', image: 'https://via.placeholder.com/150' },

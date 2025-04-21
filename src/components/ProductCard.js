@@ -9,7 +9,7 @@ function ProductCard({ product, onAddToCart }) {
   return (
     <div className="product-card">
       <img
-        src={product.image || 'https://via.placeholder.com/150'}
+        src={product.image}
         alt={product.name}
         className="product-image"
       />
