@@ -1,4 +1,5 @@
 import '../css/Aside.css';
+import { Link } from 'react-router-dom';
 
 function Aside({ onCategorySelect }) {
   const categories = ['Все', 'Ноутбуки', 'Смартфоны', 'Аксессуары', 'Планшеты'];
@@ -8,17 +9,20 @@ function Aside({ onCategorySelect }) {
       <h1>Категории</h1>
       <ul>
         {categories.map((category) => (
-          <li
-            key={category}
-            onClick={() => onCategorySelect && onCategorySelect(category)}
-            className="category-item"
-          >
-            {category}
+          <li key={category}>
+            <Link
+              to="/"
+              className="category-item"
+              key={category}
+              onClick={() => onCategorySelect(category)}
+            >
+              {category}
+            </Link>
           </li>
         ))}
       </ul>
     </aside>
   );
 }
-
-export default Aside;
+ 
+ export default Aside;
