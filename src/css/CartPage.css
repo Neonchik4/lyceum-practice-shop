@@ -55,6 +55,11 @@
   
   .cart-page h3 {
     margin-top: 20px;
+    text-align: left;
+    color: #2c3e50;
+  }
+
+  .cart-page h2 {
     text-align: right;
     color: #2c3e50;
   }

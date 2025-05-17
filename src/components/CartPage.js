@@ -28,7 +28,7 @@ function CartPage({ cartItems, onRemoveFromCart, totalPrice }) {
             <button onClick={() => onRemoveFromCart(item.id)}>Удалить</button>
           </div>
         ))}
-        <h3>Итого: ${totalPrice.toFixed(2)}</h3>
+        <h2>Итого: ${totalPrice.toFixed(2)}</h2>
       </div>
     </div>
   );
